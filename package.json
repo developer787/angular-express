@@ -1,0 +1,45 @@
+{
+  "name": "vimschool",
+  "version": "1.0.0",
+  "description": "vim education software",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "build": "./node_modules/webpack/bin/webpack.js",
+    "test": "mocha"
+  },
+  "author": "ACM",
+  "license": "MIT",
+  "dependencies": {
+    "angular-animate": "^1.5.5",
+    "angular-route": "^1.5.5",
+    "express": "^4.13.4",
+    "pug": "^2.0.0-alpha7"
+  },
+  "devDependencies": {
+    "angular": "^1.5.5",
+    "babel-core": "^6.7.2",
+    "babel-eslint": "^5.0.0",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-es2015": "^6.6.0",
+    "babel-preset-es2015-loose": "^7.0.0",
+    "babel-preset-stage-1": "^6.5.0",
+    "css-loader": "^0.23.1",
+    "eslint": "^1.10.3",
+    "file-loader": "^0.8.5",
+    "font-awesome": "^4.5.0",
+    "html-loader": "^0.4.3",
+    "html-webpack-plugin": "^2.9.0",
+    "less": "^2.6.1",
+    "less-loader": "^2.2.3",
+    "md5": "^2.1.0",
+    "nano": "^6.2.0",
+    "nano-blue": "^0.3.0",
+    "raw-loader": "^0.5.1",
+    "style-loader": "^0.13.0",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.0",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
