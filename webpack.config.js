@@ -1,16 +1,17 @@
 var path = require('path');
+var config = require('./toolbox/config')
 
 module.exports = {
   devServer: {
-    host: 'localhost',
-    port: 8888
+    host: config.ip, 
+    port: config.devport
   },
   entry: {
     app: './entry'
   },
   output: {
     path: path.join(__dirname, 'public'),
-    publicPath: 'http://localhost:3000',
+    publicPath: config.ip + ':' + config.port,
     filename: '[name].js'
   },
   module: {

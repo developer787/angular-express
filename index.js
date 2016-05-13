@@ -10,6 +10,7 @@ var express      = require('express')
 ,   not_found    = require('./toolbox/not_found')
 ,   error_detail = require('./toolbox/error_detail')
 ,   error_basic  = require('./toolbox/error_basic')
+,   config       = require('./toolbox/config')
 ,   app          = express();
 
 app
@@ -26,8 +27,8 @@ app
 if(app.get('env') === 'development') {
   app.use(error_detail);
 }
-app.use(error_basic);
 app
-  .listen(3000, function(){
+  .use(error_basic)
+  .listen(config.port, function(){
     console.log('School is listening on port 3000');
 });
