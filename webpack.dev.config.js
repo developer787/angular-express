@@ -3,18 +3,11 @@ var config = require('./toolbox/config');
 var publicPath;
 
 module.exports = {
-  devServer: {
- //   contentBase: "./public",
-    host: config.ip, 
-    port: config.devport
-  },
   entry: {
     app: './entry'
   },
   output: {
-    path: path.join(__dirname, 'public'),
-    publicPath: config.ip + ':' + config.devport + '/public',
-    filename: '[name].js'
+    path: '/' 
   },
   module: {
     loaders: [{ test: /\.js$/, 

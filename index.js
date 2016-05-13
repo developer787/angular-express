@@ -7,10 +7,14 @@ var express      = require('express')
 ,   logger       = require('morgan')
 ,   bodyParser   = require('body-parser')
 ,   cookieParser = require('cookie-parser')
+,   webpackDev   = require('webpack-dev-middleware')
+,   webpack      = require('webpack')
 ,   not_found    = require('./toolbox/not_found')
 ,   error_detail = require('./toolbox/error_detail')
 ,   error_basic  = require('./toolbox/error_basic')
 ,   config       = require('./toolbox/config')
+,   wpConfig     = require('./webpack.dev.config')
+,   wpOptions    = require('./webpack.options')
 ,   app          = express();
 
 app
@@ -19,7 +23,12 @@ app
   .use(logger('dev'))
   .use(bodyParser.json())
   .use(bodyParser.urlencoded({extended: false}))
-  .use(cookieParser())
+  .use(cookieParser());
+if(app.get('env') === 'development') {
+  var compiler = webpack(wpConfig);
+  app.use(webpackDev(compiler, wpOptions));
+}
+app
   .use(assets)
   .use('/', home)
   .use(not_found);
