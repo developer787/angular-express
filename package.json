@@ -5,6 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "webpack": "webpack-dev-server",
+    "dev": "webpack-dev-server --config webpack.config.js --hot --inline --progress --devtool eval",
+    "production": "NODE_ENV=production node index.js",
     "build": "./node_modules/webpack/bin/webpack.js",
     "test": "mocha"
   },

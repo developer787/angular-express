@@ -3,6 +3,7 @@ var config = require('./toolbox/config')
 
 module.exports = {
   devServer: {
+    contentBase: "./public",
     host: config.ip, 
     port: config.devport
   },
