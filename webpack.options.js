@@ -1,4 +1,4 @@
 module.exports = {
-  publicPath: '/public/',
+  publicPath: '/',
   stats: {colors: true}
 }
