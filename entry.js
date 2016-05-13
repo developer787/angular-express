@@ -14,4 +14,4 @@ app.config(router);
 app
   .controller('masterCtrl', masterCtrl)
   .directive('daHeaderDrtv', headerDrtv)
-  .directive('masterDrtv', masterDrtv);
+  .directive('daMasterDrtv', masterDrtv);

@@ -13,6 +13,8 @@
   "dependencies": {
     "angular-animate": "^1.5.5",
     "angular-route": "^1.5.5",
+    "body-parser": "^1.15.1",
+    "cookie-parser": "^1.4.1",
     "express": "^4.13.4",
     "pug": "^2.0.0-alpha7"
   },
@@ -34,6 +36,7 @@
     "less": "^2.6.1",
     "less-loader": "^2.2.3",
     "md5": "^2.1.0",
+    "morgan": "^1.7.0",
     "nano": "^6.2.0",
     "nano-blue": "^0.3.0",
     "raw-loader": "^0.5.1",
