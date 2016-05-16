@@ -8,6 +8,7 @@ var express      = require('express')
 ,   bodyParser   = require('body-parser')
 ,   cookieParser = require('cookie-parser')
 ,   webpackDev   = require('webpack-dev-middleware')
+,   webpackHot   = require('webpack-hot-middleware')
 ,   webpack      = require('webpack')
 ,   not_found    = require('./toolbox/not_found')
 ,   error_detail = require('./toolbox/error_detail')
@@ -27,6 +28,7 @@ app
 if(app.get('env') === 'development') {
   var compiler = webpack(wpConfig);
   app.use(webpackDev(compiler, wpOptions));
+  app.use(webpackHot(compiler, {}))
 }
 app
   .use(assets)
